@@ -18,25 +18,22 @@
 /* Variants */
 .primary {
     background-color: var(--btn-primary);
-    /* #7d8c79 */
     color: var(--white);
-    box-shadow: 0 4px 6px -1px rgba(125, 140, 121, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
 }
 
 .primary:hover {
-    background-color: #6b7a67;
-    /* Darker shade of #7d8c79 */
-    box-shadow: 0 6px 8px -1px rgba(125, 140, 121, 0.3);
+    background-color: #333333;
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.3);
 }
 
 .secondary {
     background-color: var(--accent-soft);
-    /* #c4cebc */
     color: var(--text-heading);
 }
 
 .secondary:hover {
-    background-color: #b3bdab;
+    background-color: #e6e6e6;
 }
 
 .outline {
@@ -46,8 +43,7 @@
 }
 
 .outline:hover {
-    background-color: rgba(86, 97, 93, 0.05);
-    /* #56615d */
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .ghost {

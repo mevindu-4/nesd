@@ -43,11 +43,10 @@
 }
 
 .popular {
-    background: #fbfbfb;
-    /* slightly lighter or different? */
+    background: #ffffff;
     border: 2px solid var(--btn-primary);
     transform: scale(1.05);
-    box-shadow: 0 20px 40px -10px rgba(125, 140, 121, 0.2);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 

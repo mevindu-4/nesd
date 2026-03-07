@@ -1,0 +1,34 @@
+.missionSection {
+    padding: 6rem 0;
+    background-color: var(--bg-primary);
+}
+
+.contentWrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-body);
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    font-size: 1.75rem;
+    /* Large and airy */
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text-heading);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        font-size: 1.25rem;
+    }
+}

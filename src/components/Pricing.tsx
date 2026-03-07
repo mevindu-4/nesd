@@ -7,7 +7,7 @@ const tiers = [
     {
         name: 'Mini',
         limit: 'Up to 10 Units',
-        price: 'LKR 2,500',
+        price: 'LKR 999',
         period: '/mo',
         features: ['Basic Tenant Management', 'Rent Tracking', 'Email Support'],
         cta: 'Start Free Trial',
@@ -16,7 +16,7 @@ const tiers = [
     {
         name: 'Plus',
         limit: 'Up to 50 Units',
-        price: 'LKR 8,500',
+        price: 'LKR 2,499',
         period: '/mo',
         features: ['Advanced Reporting', 'Automated SMS Alerts', 'Priority Support', 'Bank Integration'],
         cta: 'Start Free Trial',
@@ -26,8 +26,8 @@ const tiers = [
     {
         name: 'Pro',
         limit: 'Unlimited Units',
-        price: 'Custom',
-        period: '',
+        price: 'LKR 4,999',
+        period: '/mo',
         features: ['Dedicated Account Manager', 'Custom API Access', 'Multi-User Access', 'White-labeling'],
         cta: 'Contact Sales',
         variant: 'outline' as const,

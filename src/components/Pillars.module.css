@@ -64,7 +64,7 @@
 
 .card:hover .icon {
     color: var(--color-primary);
-    text-shadow: 0 0 15px rgba(178, 255, 89, 0.5);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 .phase {
@@ -85,7 +85,7 @@
 
 .description {
     line-height: 1.6;
-    color: #AAAAAA;
+    color: #444444;
     font-size: 0.95rem;
 }
 

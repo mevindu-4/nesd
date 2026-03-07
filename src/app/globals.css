@@ -1,21 +1,20 @@
 :root {
-  --bg-primary: #f6f6f4;
-  /* Reverted to off-white for the rest of the page */
-  --bg-hero: #f6f6f4;
-  /* Off-white for the hero card */
-  --hero-gradient: linear-gradient(180deg, #f6f6f4 0%, #e8ede6 100%);
-  /* Subtle gradient for hero card */
+  --bg-primary: #ffffff;
+  /* pure white */
+  --bg-hero: #ffffff;
+  /* white hero background */
+  --hero-gradient: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
 
-  --text-heading: #1a1f1d;
-  /* Almost black */
-  --text-body: #2d3633;
-  /* Very dark grey */
-  --btn-primary: #3a4a36;
-  /* Dark Forest Green */
-  --accent-soft: #8f9e85;
-  /* Medium Olive Green */
-  --border-neutral: #86847f;
-  /* Darker border */
+  --text-heading: #000000;
+  /* pure black */
+  --text-body: #333333;
+  /* strict dark gray */
+  --btn-primary: #000000;
+  /* pitch black buttons */
+  --accent-soft: #f0f0f0;
+  /* light gray for soft accents */
+  --border-neutral: #e6e6e6;
+  /* clean light gray borders */
   --white: #ffffff;
 
   --max-width: 1200px;

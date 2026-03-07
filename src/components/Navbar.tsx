@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from './ui/Button';
 import styles from './Navbar.module.css';
 
@@ -12,15 +13,17 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <Link href="/">Neski</Link>
+                    <Link href="/">
+                        <Image src="https://ik.imagekit.io/qetpsnccs/Neski%20web/L2.png" alt="Neski Logo" width={100} height={40} style={{ objectFit: 'contain' }} />
+                    </Link>
                 </div>
 
                 {/* Desktop Menu - Centered Links */}
                 <div className={styles.navLinks}>
-                    <Link href="#home" className={styles.link}>Home</Link>
-                    <Link href="#features" className={styles.link}>Features</Link>
-                    <Link href="#pricing" className={styles.link}>Pricing</Link>
-                    <Link href="#contact" className={styles.link}>Contact</Link>
+                    <Link href="/" className={styles.link}>Home</Link>
+                    <Link href="/features" className={styles.link}>Features</Link>
+                    <Link href="/pricing" className={styles.link}>Pricing</Link>
+                    <Link href="/about" className={styles.link}>About</Link>
                 </div>
 
                 {/* CTA Button - Right Aligned */}
@@ -41,10 +44,10 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 <div className={`${styles.mobileMenu} ${isOpen ? styles.show : ''}`}>
-                    <Link href="#home" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link href="#features" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Features</Link>
-                    <Link href="#pricing" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Pricing</Link>
-                    <Link href="#contact" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Contact</Link>
+                    <Link href="/" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link href="/features" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Features</Link>
+                    <Link href="/pricing" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Pricing</Link>
+                    <Link href="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}>About</Link>
                     <div className={styles.mobileBtn}>
                         <Button variant="primary" fullWidth onClick={() => setIsOpen(false)}>Get 14 Days Free Trial</Button>
                     </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -9,8 +10,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Neski | Keep Calm. We've Got the Keys.",
+  title: "Neski",
   description: "Neski transforms rental management for hostels and apartments in Sri Lanka.",
+  icons: {
+    icon: "https://ik.imagekit.io/qetpsnccs/Neski%20web/Nq.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.variable}>
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

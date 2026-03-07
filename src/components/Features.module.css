@@ -95,8 +95,8 @@
 }
 
 .check {
-    color: var(--btn-primary);
-    background: rgba(125, 140, 121, 0.1);
+    color: var(--white);
+    background: var(--btn-primary);
     width: 20px;
     height: 20px;
     border-radius: 50%;

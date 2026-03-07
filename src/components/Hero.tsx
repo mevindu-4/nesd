@@ -1,16 +1,38 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import Section from './ui/Section';
 import Button from './ui/Button';
 import styles from './Hero.module.css';
 
 export default function Hero() {
+    const fullText = "We’ve Got the Keys.";
+    const [displayedText, setDisplayedText] = useState('');
+
+    useEffect(() => {
+        let i = 0;
+        const typingInterval = setInterval(() => {
+            if (i < fullText.length) {
+                setDisplayedText(fullText.substring(0, i + 1));
+                i++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, 100);
+
+        return () => clearInterval(typingInterval);
+    }, []);
+
     return (
         <Section className={styles.heroSection}>
             <div className={styles.heroCard}>
                 <div className={styles.content}>
                     <h1 className={styles.headline}>
                         Keep Calm.<br />
-                        <span className={styles.highlight}>We’ve Got the Keys.</span>
+                        <span className={styles.highlight}>
+                            {displayedText}
+                            <span className={styles.cursor}>|</span>
+                        </span>
                     </h1>
                     <p className={styles.subheadline}>
                         Automating rental management for hostels and full properties.

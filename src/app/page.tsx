@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Mission from "@/components/Mission";
 import Features from "@/components/Features";
-import Analytics from "@/components/Analytics";
 import Pricing from "@/components/Pricing";
+import Analytics from "@/components/Analytics";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 
@@ -11,9 +12,10 @@ export default function Home() {
     <main className={styles.main}>
       <Navbar />
       <Hero />
+      <Mission />
       <Features />
-      <Analytics />
       <Pricing />
+      <Analytics />
       <Footer />
     </main>
   );

@@ -134,7 +134,7 @@
     transform: translateX(-50%);
     width: 6px;
     height: 6px;
-    background: var(--btn-primary);
+    background: #000000;
     border-radius: 50%;
 }
 
@@ -157,8 +157,8 @@
     height: 120px;
     margin: 0 auto 1rem;
     position: relative;
-    background: conic-gradient(var(--btn-primary) 0% 72%,
-            var(--accent-soft) 72% 100%);
+    background: conic-gradient(#000000 0% 72%,
+            #e6e6e6 72% 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
