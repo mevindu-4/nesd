@@ -21,9 +21,10 @@ export default function Navbar() {
                 {/* Desktop Menu - Centered Links */}
                 <div className={styles.navLinks}>
                     <Link href="/" className={styles.link}>Home</Link>
-                    <Link href="/features" className={styles.link}>Features</Link>
                     <Link href="/pricing" className={styles.link}>Pricing</Link>
                     <Link href="/about" className={styles.link}>About</Link>
+                    <Link href="/blog" className={styles.link}>Updates</Link>
+                    <Link href="/contact" className={styles.link}>Contact</Link>
                 </div>
 
                 {/* CTA Button - Right Aligned */}
@@ -48,9 +49,10 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 <div className={`${styles.mobileMenu} ${isOpen ? styles.show : ''}`}>
                     <Link href="/" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link href="/features" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Features</Link>
                     <Link href="/pricing" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Pricing</Link>
                     <Link href="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}>About</Link>
+                    <Link href="/blog" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Updates</Link>
+                    <Link href="/contact" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Contact</Link>
                     <div className={styles.mobileBtn}>
                         <a href="https://forms.gle/3zGogPRswFTmXrNo8" target="_blank" rel="noopener noreferrer" style={{ display: 'block', marginBottom: '1rem' }}>
                             <Button variant="outline" fullWidth onClick={() => setIsOpen(false)}>Fill and Win</Button>

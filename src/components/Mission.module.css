@@ -1,12 +1,12 @@
 .missionSection {
-    padding: 6rem 0;
+    padding: 0 0 2rem;
     background-color: var(--bg-primary);
 }
 
 .contentWrapper {
     max-width: 900px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .subtitle {
@@ -15,7 +15,7 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--text-body);
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .content {

@@ -22,15 +22,13 @@ export default function Footer() {
                         <Link href="/features">Features</Link>
                         <Link href="/pricing">Pricing</Link>
                         <Link href="/#analytics">Analytics</Link>
-                        <Link href="/#mobile-app">Mobile App</Link>
                     </div>
 
                     <div className={styles.linksCol}>
                         <h4 className={styles.colTitle}>Company</h4>
                         <Link href="/about">About Us</Link>
-                        <Link href="/careers">Careers</Link>
-                        <Link href="/blog">Blog</Link>
-                        <Link href="/about">About</Link>
+                        <Link href="/blog">Updates</Link>
+                        <Link href="/contact">Contact</Link>
                     </div>
 
                     <div className={styles.linksCol}>

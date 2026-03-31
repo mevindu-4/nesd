@@ -1,0 +1,58 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-heading);
+}
+
+.lastUpdated {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-outfit);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+}
+
+.text {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.list {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .container {
+    padding: 60px 20px;
+  }
+}

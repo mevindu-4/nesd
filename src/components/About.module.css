@@ -147,19 +147,15 @@
 
 .timelineDot {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    right: -20px;
+    width: 14px;
+    height: 14px;
+    right: -7px;
     background-color: var(--text-heading);
-    top: 15px;
+    top: 24px;
     border-radius: 50%;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1.1rem;
+    z-index: 10;
+    box-shadow: 0 0 0 6px var(--bg-primary);
+    /* Halo for cleanliness */
 }
 
 .itemYear {
@@ -202,7 +198,7 @@
 }
 
 .right .timelineDot {
-    left: -20px;
+    left: -7px;
 }
 
 .timelineItem.revealed {
@@ -223,7 +219,8 @@
     }
 
     .timelineDot {
-        left: 0;
+        left: 13px !important;
+        /* Line is at 20px, dot is 14px, so (20 - 14/2) = 13px */
     }
 
     .right {
@@ -231,6 +228,6 @@
     }
 
     .right .timelineDot {
-        left: 0;
+        left: 13px !important;
     }
 }

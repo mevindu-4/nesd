@@ -9,8 +9,8 @@
     /* Remove bottom margin to flush with next section */
     background-color: var(--white);
     /* Distinct white background for this section */
-    padding-bottom: 4rem;
-    /* Add bottom spacing inside the white section */
+    padding-bottom: 0;
+    /* Remove bottom spacing to bring next section closer */
 }
 
 .heroCard {
@@ -82,6 +82,12 @@
     50% {
         opacity: 0;
     }
+}
+
+.heroCta {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .subheadline {

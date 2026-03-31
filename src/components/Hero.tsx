@@ -34,14 +34,15 @@ export default function Hero() {
                             <span className={styles.cursor}>|</span>
                         </span>
                     </h1>
+                    
+                    <div className={styles.heroCta}>
+                        <Button variant="primary" size="lg">Get Started</Button>
+                    </div>
+
                     <p className={styles.subheadline}>
                         Automating rental management for hostels and full properties.
                         Experience the future of property management with Neski.
                     </p>
-                    <div className={styles.ctaGroup}>
-                        <Button variant="primary" size="lg">Get Started</Button>
-                        <Button variant="outline" size="lg">View Demo</Button>
-                    </div>
                 </div>
 
                 <div className={styles.visuals}>

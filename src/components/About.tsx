@@ -78,7 +78,7 @@ const About = () => {
                             ref={(el) => { itemRefs.current[0] = el; }} 
                             className={`${styles.timelineItem} ${styles.left}`}
                         >
-                            <div className={styles.timelineDot}>1</div>
+                            <div className={styles.timelineDot}></div>
                             <div className={styles.timelineContent}>
                                 <div className={styles.itemYear}>March – April 2026</div>
                                 <h4 className={styles.itemHeading}>Business Spark 2026</h4>
@@ -93,7 +93,7 @@ const About = () => {
                             ref={(el) => { itemRefs.current[1] = el; }} 
                             className={`${styles.timelineItem} ${styles.right}`}
                         >
-                            <div className={styles.timelineDot}>2</div>
+                            <div className={styles.timelineDot}></div>
                             <div className={styles.timelineContent}>
                                 <div className={styles.itemYear}>January 2026</div>
                                 <h4 className={styles.itemHeading}>KDU Startup Today '26</h4>
@@ -108,7 +108,7 @@ const About = () => {
                             ref={(el) => { itemRefs.current[2] = el; }} 
                             className={`${styles.timelineItem} ${styles.left}`}
                         >
-                            <div className={styles.timelineDot}>3</div>
+                            <div className={styles.timelineDot}></div>
                             <div className={styles.timelineContent}>
                                 <div className={styles.itemYear}>2025</div>
                                 <h4 className={styles.itemHeading}>Venture Engine 2025</h4>
@@ -126,17 +126,14 @@ const About = () => {
                         <div className={styles.gridItem}>
                             <h4 className={styles.itemTitle}>Mithila Dhanundara</h4>
                             <p className={styles.itemRole}>Growth & Strategy Lead</p>
-                            <p className={styles.itemText}>Electronics and Computer Science Undergraduate.</p>
                         </div>
                         <div className={styles.gridItem}>
                             <h4 className={styles.itemTitle}>Mevindu Basnayake</h4>
                             <p className={styles.itemRole}>Technical & Security Lead</p>
-                            <p className={styles.itemText}>Electronics and Computer Science Undergraduate.</p>
                         </div>
                         <div className={styles.gridItem}>
                             <h4 className={styles.itemTitle}>Charith Fonseka</h4>
                             <p className={styles.itemRole}>Operations & Systems Architect</p>
-                            <p className={styles.itemText}>Management and Information Technology Undergraduate.</p>
                         </div>
                     </div>
                 </div>
