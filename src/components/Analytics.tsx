@@ -4,6 +4,40 @@ import React, { useEffect, useRef, useState } from 'react';
 import Section from './ui/Section';
 import styles from './Analytics.module.css';
 
+interface CountUpProps {
+    end: number;
+    durationValue?: number;
+    start: boolean;
+    prefix?: string;
+    suffix?: string;
+}
+
+const CountUp = ({ end, durationValue = 1500, start, prefix = '', suffix = '' }: CountUpProps) => {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        if (!start) return;
+
+        let startTime: number | null = null;
+        let animationFrame: number;
+
+        const animate = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / durationValue, 1);
+            setCount(Math.floor(progress * end));
+
+            if (progress < 1) {
+                animationFrame = requestAnimationFrame(animate);
+            }
+        };
+
+        animationFrame = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(animationFrame);
+    }, [end, durationValue, start]);
+
+    return <span>{prefix}{count}{suffix}</span>;
+}
+
 export default function Analytics() {
     const sectionRef = useRef<HTMLElement>(null);
     const [isRevealed, setIsRevealed] = useState(false);
@@ -41,11 +75,15 @@ export default function Analytics() {
 
                     <div className={styles.statsRow}>
                         <div className={styles.statItem}>
-                            <span className={styles.statValue}>98%</span>
+                            <span className={styles.statValue}>
+                                <CountUp end={98} start={isRevealed} suffix="%" />
+                            </span>
                             <span className={styles.statLabel}>Occupancy Rate</span>
                         </div>
                         <div className={styles.statItem}>
-                            <span className={styles.statValue}>+24%</span>
+                            <span className={styles.statValue}>
+                                <CountUp end={24} start={isRevealed} prefix="+" suffix="%" />
+                            </span>
                             <span className={styles.statLabel}>Revenue Growth</span>
                         </div>
                     </div>
@@ -80,7 +118,7 @@ export default function Analytics() {
                         <div className={styles.donutChart}>
                             <div className={styles.donutSegment}></div>
                             <div className={styles.donutHole}>
-                                <span>72%</span>
+                                <CountUp end={72} start={isRevealed} suffix="%" />
                             </div>
                         </div>
                         <div className={styles.legend}>
