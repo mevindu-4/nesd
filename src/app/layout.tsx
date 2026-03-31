@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Neski",
   description: "Neski transforms rental management for hostels and apartments in Sri Lanka.",
   icons: {
-    icon: "https://ik.imagekit.io/qetpsnccs/Neski%20web/Nq.png",
+    icon: "https://ik.imagekit.io/qetpsnccs/Neski/Untitled%20design-12.png",
   },
 };
 
