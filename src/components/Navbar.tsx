@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Link href="/">
-                        <Image src="https://ik.imagekit.io/qetpsnccs/Neski%20web/L2.png" alt="Neski Logo" width={100} height={40} style={{ objectFit: 'contain' }} />
+                        <Image src="https://ik.imagekit.io/qetpsnccs/Neski/Untitled%20design-11.png" alt="Neski Logo" width={150} height={40} style={{ objectFit: 'contain' }} />
                     </Link>
                 </div>
 
@@ -31,7 +31,7 @@ export default function Navbar() {
                     <a href="https://forms.gle/3zGogPRswFTmXrNo8" target="_blank" rel="noopener noreferrer" style={{ marginRight: '1rem' }}>
                         <Button variant="outline" size="md">Fill and Win</Button>
                     </a>
-                    <Button variant="primary" size="md">Get 14 Days Free Trial</Button>
+                    <Button variant="primary" size="md">Get 45 Days Free Trial</Button>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -55,7 +55,7 @@ export default function Navbar() {
                         <a href="https://forms.gle/3zGogPRswFTmXrNo8" target="_blank" rel="noopener noreferrer" style={{ display: 'block', marginBottom: '1rem' }}>
                             <Button variant="outline" fullWidth onClick={() => setIsOpen(false)}>Fill and Win</Button>
                         </a>
-                        <Button variant="primary" fullWidth onClick={() => setIsOpen(false)}>Get 14 Days Free Trial</Button>
+                        <Button variant="primary" fullWidth onClick={() => setIsOpen(false)}>Get 45 Days Free Trial</Button>
                     </div>
                 </div>
             </div>

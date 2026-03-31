@@ -1,25 +1,16 @@
 .navbar {
-    width: 98%;
-    /* Match the Hero Card width (small edge gaps) */
+    width: 100%;
     max-width: none;
-    /* Remove legacy constraint if any */
     height: var(--nav-height);
     background-color: transparent;
     position: absolute;
     top: 0;
-    /* Starts at top */
-    /* Aligned with Hero Card top */
-    left: 50%;
-    transform: translateX(-50%);
-    /* Centered exactly like the card */
+    left: 0;
+    transform: none;
     z-index: 1000;
-    padding: 0 3rem;
-    /* Inner spacing */
-    /* More nice padding to push content in from the rounded corners */
+    padding: 0 1.5rem;
     display: flex;
     align-items: center;
-    /* Removed border-radius as it's floating above */
-    /* Optional: match top radius */
 }
 
 .container {

@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className={styles.topSection}>
                     <div className={styles.brandCol}>
                         <Link href="/" className={styles.logo}>
-                            <Image src="https://ik.imagekit.io/qetpsnccs/Neski%20web/L2.png" alt="Neski Logo" width={100} height={40} style={{ objectFit: 'contain' }} />
+                            <Image src="https://ik.imagekit.io/qetpsnccs/Neski/Untitled%20design-11.png" alt="Neski Logo" width={100} height={40} style={{ objectFit: 'contain' }} />
                         </Link>
                         <p className={styles.tagline}>
                             Transforming rental management with simplicity and trust.

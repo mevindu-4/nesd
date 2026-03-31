@@ -1,6 +1,37 @@
+"use client";
+
+import { useEffect, useRef } from 'react';
 import styles from './About.module.css';
 
 const About = () => {
+    const timelineRef = useRef<HTMLDivElement>(null);
+    const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.revealed);
+                }
+            });
+        }, observerOptions);
+
+        if (timelineRef.current) {
+            observer.observe(timelineRef.current);
+        }
+
+        itemRefs.current.forEach((item) => {
+            if (item) observer.observe(item);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section id="about" className={styles.about}>
             <div className={styles.container}>
@@ -38,23 +69,53 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className={styles.section}>
-                    <h3 className={styles.subtitle}>Our Journey from Concept to Top 50</h3>
-                    <p className={styles.content} style={{ marginBottom: '3rem' }}>
-                        Neski is more than just an app; it is a vetted business model backed by Sri Lanka's foremost startup funding platform. Our selection for the <a href="https://ventureengine.lk" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit' }}>Venture Engine</a> 2025 Top 50 validates our mission to modernize property management.
-                    </p>
-                    <div className={styles.grid}>
-                        <div className={styles.gridItem}>
-                            <h4 className={styles.itemTitle}>Vetted Innovation</h4>
-                            <p className={styles.itemText}>Reaching the Top 50 signifies that our platform has undergone a rigorous filtering process by industry leaders.</p>
+                <div className={styles.section} style={{ borderBottom: 'none' }}>
+                    <h3 className={styles.subtitle}>Our Journey</h3>
+                    
+                    <div ref={timelineRef} className={styles.timeline}>
+                        {/* 1. Business Spark 2026 */}
+                        <div 
+                            ref={(el) => { itemRefs.current[0] = el; }} 
+                            className={`${styles.timelineItem} ${styles.left}`}
+                        >
+                            <div className={styles.timelineDot}>1</div>
+                            <div className={styles.timelineContent}>
+                                <div className={styles.itemYear}>March – April 2026</div>
+                                <h4 className={styles.itemHeading}>Business Spark 2026</h4>
+                                <p><b>Overview:</b> A premier startup competition organized by the Rotaract Club of the Faculty of Management and Finance, University of Colombo.</p>
+                                <p><b>The Achievement:</b> Neski was selected for the Top 8 in March 2026, advancing to Round 2 for a detailed business plan submission and a high-stakes 1-on-1 discussion scheduled for April 4, 2026.</p>
+                                <p><b>Significance:</b> Being vetted and mentored by MiddleWay Ventures focuses heavily on our operational scalability and the long-term economic viability of our model.</p>
+                            </div>
                         </div>
-                        <div className={styles.gridItem}>
-                            <h4 className={styles.itemTitle}>Strategic Growth</h4>
-                            <p className={styles.itemText}>Through high-level workshops in branding and financial planning, we have bridged the gap between a technical idea and a fundable business.</p>
+
+                        {/* 2. KDU Startup Today '26 */}
+                        <div 
+                            ref={(el) => { itemRefs.current[1] = el; }} 
+                            className={`${styles.timelineItem} ${styles.right}`}
+                        >
+                            <div className={styles.timelineDot}>2</div>
+                            <div className={styles.timelineContent}>
+                                <div className={styles.itemYear}>January 2026</div>
+                                <h4 className={styles.itemHeading}>KDU Startup Today '26</h4>
+                                <p><b>Overview:</b> An annual entrepreneurship competition hosted by the General Sir John Kotelawala Defence University (KDU).</p>
+                                <p><b>The Achievement:</b> Neski secured the 1st Runner-Up position in January 2026 after a competitive pitch session against innovative student-led startups from across the island.</p>
+                                <p><b>Significance:</b> This win provided early-stage validation for our mission to digitize the rental market and proved that our business case resonates with academic and industry judges.</p>
+                            </div>
                         </div>
-                        <div className={styles.gridItem}>
-                            <h4 className={styles.itemTitle}>Industry Recognition</h4>
-                            <p className={styles.itemText}>Pitching to the <a href="https://lankanangelnetwork.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit' }}>Lankan Angel Network (LAN)</a> has allowed us to align our vision with global best practices and local needs.</p>
+
+                        {/* 3. Venture Engine 2025 */}
+                        <div 
+                            ref={(el) => { itemRefs.current[2] = el; }} 
+                            className={`${styles.timelineItem} ${styles.left}`}
+                        >
+                            <div className={styles.timelineDot}>3</div>
+                            <div className={styles.timelineContent}>
+                                <div className={styles.itemYear}>2025</div>
+                                <h4 className={styles.itemHeading}>Venture Engine 2025</h4>
+                                <p><b>Overview:</b> Recognized as Sri Lanka’s foremost startup funding platform, founded by the Lankan Angel Network (LAN).</p>
+                                <p><b>The Achievement:</b> Neski was named a Top 50 Finalist during the 2025 competition cycle, selected from a massive pool of national applicants.</p>
+                                <p><b>Significance:</b> Reaching the Top 50 is a "stamp of approval" from industry leaders, signifying that Neski has undergone a rigorous filtering process and aligns with global best practices for fundable businesses.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

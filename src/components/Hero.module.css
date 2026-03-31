@@ -15,9 +15,9 @@
 
 .heroCard {
     background: var(--hero-gradient);
-    border-radius: 40px;
+    border-radius: 0;
     width: 100%;
-    max-width: 98%;
+    max-width: 100%;
     /* Smaller side gaps as requested */
     margin: 6rem auto 0;
     /* Push down below the absolute Navbar (Nav is ~80px/5rem) */
