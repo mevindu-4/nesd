@@ -1,0 +1,29 @@
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.socialLink {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #0b0d14;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialLink :global(svg) {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.socialLink:focus-visible {
+    outline: 3px solid rgba(79, 70, 229, 0.45);
+    outline-offset: 3px;
+}

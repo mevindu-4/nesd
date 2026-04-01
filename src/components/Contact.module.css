@@ -97,6 +97,16 @@
     line-height: 1.6;
 }
 
+.socialWrap {
+    margin-top: 0.5rem;
+}
+
+.socialTitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-heading);
+}
+
 @media (min-width: 992px) {
     .grid {
         grid-template-columns: 1.5fr 1fr;

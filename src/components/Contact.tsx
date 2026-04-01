@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './ui/Section';
 import Button from './ui/Button';
 import styles from './Contact.module.css';
+import SocialLinks from './SocialLinks';
 
 export default function Contact() {
     return (
@@ -71,6 +72,11 @@ export default function Contact() {
                             <p>Jagath Ranaviru Mawatha,</p>
                             <p>Wattala.</p>
                         </div>
+                    </div>
+
+                    <div className={styles.socialWrap}>
+                        <h4 className={styles.socialTitle}>Follow Us</h4>
+                        <SocialLinks />
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 import Image from 'next/image';
+import SocialLinks from './SocialLinks';
 
 export default function Footer() {
     return (
@@ -42,7 +43,7 @@ export default function Footer() {
                     <div className={styles.copyright}>
                         &copy; {new Date().getFullYear()} Neski. All rights reserved.
                     </div>
-
+                    <SocialLinks />
                 </div>
             </div>
         </footer>
