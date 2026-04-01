@@ -1,6 +1,5 @@
 .navbar {
     width: 100%;
-    max-width: none;
     height: var(--nav-height);
     background-color: transparent;
     position: absolute;
@@ -8,14 +7,13 @@
     left: 0;
     transform: none;
     z-index: 1000;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
 }
 
 .container {
-    max-width: 100%;
-    /* Fill the 96% navbar width */
+    max-width: var(--max-width);
     margin: 0 auto;
     width: 100%;
     position: relative;
@@ -31,7 +29,11 @@
     color: var(--text-heading);
     letter-spacing: -0.02em;
     z-index: 10;
-    /* Allocating space to ensure center balance if using flex, or just use grid */
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: center;
 }
 
 .navLinks {
@@ -133,7 +135,7 @@
 
 @media (min-width: 768px) {
     .navbar {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
 
     .navLinks,
