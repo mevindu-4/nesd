@@ -53,7 +53,7 @@ export default function SocialLinks({ className }: SocialLinksProps) {
                     aria-label={social.name}
                     className={styles.socialLink}
                 >
-                    <social.icon aria-hidden="true" focusable="false" size={10} />
+                    <social.icon aria-hidden="true" focusable="false" size={18} />
                 </a>
             ))}
         </div>
