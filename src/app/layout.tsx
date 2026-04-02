@@ -48,6 +48,9 @@ export const metadata: Metadata = {
     shortcut: "https://ik.imagekit.io/qetpsnccs/Neski/Untitled%20design-4.jpg",
     apple: "https://ik.imagekit.io/qetpsnccs/Neski/Untitled%20design-4.jpg",
   },
+  verification: {
+    google: "z65k_8QvNKG_otZqc8Zy-HJ8Y74yxvGrXqjPnripZlY",
+  },
 };
 
 export default function RootLayout({
