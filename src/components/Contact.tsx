@@ -17,18 +17,19 @@ export default function Contact() {
             <div className={styles.grid}>
                 {/* Contact Form */}
                 <div className={styles.formWrapper}>
-                    <form className={styles.form}>
+                    <form action="https://formsubmit.co/hello@neski.lk" method="POST" className={styles.form}>
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Neski.lk!" />
                         <div className={styles.formGroup}>
                             <label className={styles.label} htmlFor="name">Full Name</label>
-                            <input type="text" id="name" className={styles.input} placeholder="Ranjith Wimalasooriya" required />
+                            <input type="text" name="name" id="name" className={styles.input} placeholder="Ranjith Wimalasooriya" required />
                         </div>
                         <div className={styles.formGroup}>
                             <label className={styles.label} htmlFor="email">Email Address</label>
-                            <input type="email" id="email" className={styles.input} placeholder="ranjith@example.com" required />
+                            <input type="email" name="email" id="email" className={styles.input} placeholder="ranjith@example.com" required />
                         </div>
                         <div className={styles.formGroup}>
                             <label className={styles.label} htmlFor="message">How can we help?</label>
-                            <textarea id="message" className={styles.textarea} placeholder="Tell us about your property..." required></textarea>
+                            <textarea name="message" id="message" className={styles.textarea} placeholder="Tell us about your property..." required></textarea>
                         </div>
                         <Button variant="primary" size="lg" fullWidth type="submit">
                             Send Message
@@ -44,8 +45,7 @@ export default function Contact() {
                         </div>
                         <div className={styles.infoText}>
                             <h4>Email Us</h4>
-                            <p>info@neski.lk</p>
-                            <p>support@neski.lk</p>
+                            <p>hello@neski.lk</p>
                         </div>
                     </div>
 
