@@ -48,7 +48,7 @@ const termsSections = [
     },
     {
         title: "Contact Information",
-        content: "If you have any questions about these Terms, please contact us at support@neski.oceaniq.tech."
+        content: "If you have any questions about these Terms, please contact us at hello@neski.lk."
     }
 ];
 

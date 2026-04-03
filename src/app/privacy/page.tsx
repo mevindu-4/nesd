@@ -41,7 +41,7 @@ const privacySections = [
     },
     {
         title: "Contact Us",
-        content: "If you have any questions or concerns about this Privacy Policy, please reach out to us at support@neski.oceaniq.tech."
+        content: "If you have any questions or concerns about this Privacy Policy, please reach out to us at hello@neski.lk."
     }
 ];
 
